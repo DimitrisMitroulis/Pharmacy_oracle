@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="562.0" prefWidth="1177.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.TableController">
+   <children>
+      <Button fx:id="Go_backBtn" layoutX="1096.0" layoutY="515.0" mnemonicParsing="false" onAction="#Go_back" text="Go_back" />
+      <TableView fx:id="table" layoutX="8.0" layoutY="83.0" prefHeight="198.0" prefWidth="1142.0">
+        <columns>
+          <TableColumn fx:id="col_cid" prefWidth="75.0" text="Customer Id" />
+          <TableColumn fx:id="col_Fname" prefWidth="175.0" text="First Name" />
+            <TableColumn fx:id="col_Lname" prefWidth="119.0" text="LastName" />
+            <TableColumn fx:id="col_City" prefWidth="132.0" text="City" />
+            <TableColumn fx:id="col_Street" prefWidth="91.0" text="Street" />
+            <TableColumn fx:id="col_StNum" prefWidth="119.0" text="Street Number" />
+            <TableColumn fx:id="col_PostCode" prefWidth="110.0" text="Postal Code" />
+            <TableColumn fx:id="col_Email" prefWidth="141.0" text="Email" />
+            <TableColumn fx:id="col_Afm" minWidth="8.0" prefWidth="179.0" text="Afm" />
+        </columns>
+      </TableView>
+      <TextField fx:id="Textcid" layoutX="14.0" layoutY="431.0" prefHeight="25.0" prefWidth="91.0" promptText="CustomerId" />
+      <TextField fx:id="Tfname" layoutX="122.0" layoutY="431.0" prefHeight="25.0" prefWidth="91.0" promptText="First Name" />
+      <TextField fx:id="Tlname" layoutX="222.0" layoutY="431.0" prefHeight="25.0" prefWidth="91.0" promptText="Last Name" />
+      <TextField fx:id="Tcity" layoutX="323.0" layoutY="431.0" prefHeight="25.0" prefWidth="91.0" promptText="SCity" />
+      <TextField fx:id="Tstreet" layoutX="427.0" layoutY="431.0" prefHeight="25.0" prefWidth="91.0" promptText="Street " />
+      <TextField fx:id="Tstnum" layoutX="533.0" layoutY="431.0" prefHeight="25.0" prefWidth="91.0" promptText="Street Number" />
+      <TextField fx:id="Tps" layoutX="640.0" layoutY="431.0" prefHeight="25.0" prefWidth="91.0" promptText="Postal Code" />
+      <TextField fx:id="Temail" layoutX="741.0" layoutY="431.0" prefHeight="25.0" prefWidth="91.0" promptText="Email" />
+      <TextField fx:id="Tafm" layoutX="843.0" layoutY="431.0" prefHeight="25.0" prefWidth="91.0" promptText="Afm" />
+      <Button fx:id="Add_customer" layoutX="1081.0" layoutY="419.0" mnemonicParsing="false" onAction="#add_button" text="Add customer" />
+      <Separator layoutX="-2.0" layoutY="411.0" prefHeight="0.0" prefWidth="1182.0" />
+      <Label alignment="CENTER" layoutX="368.0" layoutY="7.0" prefHeight="47.0" prefWidth="442.0" text="Πελατολόγιο">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="status" alignment="CENTER" layoutX="533.0" layoutY="507.0" prefHeight="25.0" prefWidth="200.0" />
+      <Button fx:id="Refresh_btn" layoutX="1101.0" layoutY="302.0" mnemonicParsing="false" onAction="#Refresh" text="Refresh" />
+      <Button fx:id="NextPage" layoutX="1103.0" layoutY="371.0" mnemonicParsing="false" onAction="#NexScene" text="NextPage" />
+   </children>
+</AnchorPane>
