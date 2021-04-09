@@ -14,10 +14,11 @@
         <columns>
           <TableColumn fx:id="col_pid" prefWidth="75.0" text="Product ID" />
           <TableColumn fx:id="col_pname" prefWidth="75.0" text="Name" />
-            <TableColumn fx:id="col_ptype" prefWidth="111.0" text="Type" />
-            <TableColumn fx:id="col_expdate" prefWidth="126.0" text="Expdate" />
-            <TableColumn fx:id="col_stock" prefWidth="84.0" text="Stock" />
-            <TableColumn fx:id="col_koaap" prefWidth="102.0" text="KOAAP" />
+            <TableColumn fx:id="col_ptype" prefWidth="79.0" text="Type" />
+            <TableColumn fx:id="col_expdate" prefWidth="97.0" text="Expdate" />
+            <TableColumn fx:id="col_stock" prefWidth="53.0" text="Stock" />
+            <TableColumn fx:id="col_koaap" prefWidth="92.0" text="KOAAP" />
+            <TableColumn fx:id="col_timessold" prefWidth="102.0" text="Times Sold" />
         </columns>
       </TableView>
       <Button fx:id="Search_btn" layoutX="611.0" layoutY="585.0" mnemonicParsing="false" onAction="#search" text="Search" />

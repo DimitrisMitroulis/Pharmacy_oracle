@@ -36,11 +36,15 @@ public class Farmaka_Controlelr implements Initializable{
     @FXML
      TableColumn<Farmaka_Table, String> col_ptype;
     @FXML
-    TableColumn<Farmaka_Table, String> col_expdate;
+    TableColumn<Farmaka_Table, Date> col_expdate;
     @FXML
      TableColumn<Farmaka_Table, String> col_stock;
     @FXML
      TableColumn<Farmaka_Table, String> col_koaap;
+    @FXML
+    TableColumn<Farmaka_Table, String> col_timessold;
+
+    //na valww sthlh times sold
 
     ObservableList<Farmaka_Table> oblist = FXCollections.observableArrayList();
     ObservableList choiceBoxStatus = FXCollections.
@@ -54,7 +58,8 @@ public class Farmaka_Controlelr implements Initializable{
         String Type = "ptype";
         String Stock = "pstock";
         String Koaap = "pkoaap";
-        choiceBoxStatus.addAll(pid,name,Type,Stock,Koaap);
+        String timessold = "ptimessold";
+        choiceBoxStatus.addAll(pid,name,Type,Stock,Koaap,timessold);
         choiceBox.getItems().addAll(choiceBoxStatus);
         choiceBox.setValue(pid);
 
@@ -81,9 +86,10 @@ public class Farmaka_Controlelr implements Initializable{
                       rs.getString("pid"),
                       rs.getString("pname"),
                       rs.getString("ptype"),
-                      rs.getString("pexpdate"),
+                      rs.getDate("pexpdate"),
                       rs.getString("pstock"),
-                      rs.getString("pkoaap")));
+                      rs.getString("pkoaap"),
+                      rs.getString("ptimessold")));
             }
           rs.close();
           stmt.close();
@@ -95,14 +101,13 @@ public class Farmaka_Controlelr implements Initializable{
           col_expdate.setCellValueFactory(new PropertyValueFactory<>("pexpdate"));
           col_stock.setCellValueFactory(new PropertyValueFactory<>("pstock"));
           col_koaap.setCellValueFactory(new PropertyValueFactory<>("pkoaap"));
-
+          col_timessold.setCellValueFactory(new PropertyValueFactory<>("ptimessold"));
           table.setItems(oblist);
       }else{
           AlertBox.display("Warning","Please type a value to search");}
 
 
     }
-
 
     public void Go_back() throws IOException {
 

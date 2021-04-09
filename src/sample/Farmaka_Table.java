@@ -1,22 +1,35 @@
 package sample;
 
-public class Farmaka_Table {
-    String pid,pname,ptype,pexpdate,pstock,pkoaap;
+import java.sql.Date;
 
-    public Farmaka_Table(String pid, String pname, String ptype, String pexpdate,  String pstock, String pkoaap) {
+public class Farmaka_Table {
+    String pid,pname,ptype,pstock,pkoaap,ptimessold;
+    Date pexpdate;
+
+
+    public Farmaka_Table(String pid, String pname, String ptype, Date pexpdate, String pstock, String pkoaap, String ptimessold) {
         this.pid = pid;
         this.pname = pname;
         this.ptype = ptype;
         this.pexpdate = pexpdate;
         this.pstock = pstock;
         this.pkoaap = pkoaap;
+        this.ptimessold = ptimessold;
     }
 
-    public String getPexpdate() {
+    public String getPtimessold() {
+        return ptimessold;
+    }
+
+    public void setPtimessold(String ptimessold) {
+        this.ptimessold = ptimessold;
+    }
+
+    public Date getPexpdate() {
         return pexpdate;
     }
 
-    public void setPexpdate(String pexpdate) {
+    public void setPexpdate(Date pexpdate) {
         this.pexpdate = pexpdate;
     }
 
