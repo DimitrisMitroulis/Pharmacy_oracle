@@ -21,7 +21,7 @@ public class Main extends Application {
         window.setScene(new Scene(root,453,500));
         window.setTitle("Hello World");
         window.show();
-        //root.getStylesheets().add("Viper.css");
+
     }
 
 
