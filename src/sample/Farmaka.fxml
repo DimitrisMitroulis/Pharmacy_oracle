@@ -27,5 +27,6 @@
       <Label layoutX="152.0" layoutY="589.0" prefHeight="17.0" prefWidth="101.0" text="Search Product by " />
       <Label fx:id="status" alignment="CENTER" layoutX="315.0" layoutY="634.0" prefHeight="38.0" prefWidth="285.0" />
       <ChoiceBox fx:id="choiceBox" layoutX="253.0" layoutY="585.0" prefWidth="150.0" />
+      <Button fx:id="next" layoutX="1015.0" layoutY="634.0" mnemonicParsing="false" onAction="#nextScene" text="Next" />
    </children>
 </AnchorPane>

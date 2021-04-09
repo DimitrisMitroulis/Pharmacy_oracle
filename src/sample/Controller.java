@@ -27,7 +27,7 @@ public class Controller {
     @FXML
     Button Login,Sign_up,Go_backBtn;
     @FXML
-    TextField UsernameTxt;
+    TextField idTxt;
     @FXML
     PasswordField PasswordTxt;
     @FXML
@@ -38,18 +38,18 @@ public class Controller {
 
         try {
             //get username and password from text fields
-            String usernameStr = UsernameTxt.getText();
+            String idStr = idTxt.getText();
             String passwordStr = PasswordTxt.getText();
 
             //check if either is emty
-            if (usernameStr.isEmpty() == false || passwordStr.isEmpty() == false) {
+            if (idStr.isEmpty() == false || passwordStr.isEmpty() == false) {
 
             //create connection
                 Connection connection = DBConnector.getConnection();
             label1.setText("Connected to Oracle Database");
             System.out.println("Connected to Oracle Database");
 
-            String sql = "insert into students(fname,password) " +
+            String sql = "insert into employee(eid,epass) " +
                     "values(?,?)";
 
 
@@ -62,7 +62,7 @@ public class Controller {
 
                 //create prepared Statement and insert username and password from text fields into database
                 PreparedStatement statement = connection.prepareStatement(sql);
-                statement.setString(1, usernameStr);
+                statement.setString(1, idStr);
                 statement.setString(2, passwordStr);
 
                 //if row succesfully added
@@ -88,21 +88,16 @@ public class Controller {
     public void LoginOnAction() throws Exception{
 
 
-        //Setup connection data
-        String dbURL = "jdbc:oracle:thin:@192.168.1.2:1521:xe";
-        String username = "c##pharmacy";
-        String password = "tiger";
-
         try {
             //get username and password from textfields
-            String usernameStr = UsernameTxt.getText();
+            String idStr = idTxt.getText();
             String passwordStr = PasswordTxt.getText();
 
             //check if either username or password is emty
-            if (usernameStr.isEmpty() == false || passwordStr.isEmpty() == false) {
+            if (idStr.isEmpty() == false || passwordStr.isEmpty() == false) {
 
                 //create connection
-                Connection connection = DriverManager.getConnection(dbURL, username, password);
+                Connection connection = DBConnector.getConnection();
                 System.out.println("Connected to Oracle Database");
 
                 String sql = "insert into students(fname,password) " +
@@ -117,7 +112,7 @@ public class Controller {
                         "email varchar2(20))";
 
                 //run select command with fname and password from user input
-                String select = "Select * from students where fname = '" + usernameStr + "' and password = '" + passwordStr + "' ";
+                String select = "Select * from employee where eid = '" + idStr + "' and epass = '" + passwordStr + "' ";
 
                 Statement statement = connection.createStatement();
                 ResultSet result = statement.executeQuery(select);
@@ -127,10 +122,10 @@ public class Controller {
                     count++;
 
 
-                    String Rname = result.getString("fname");
-                    String Rpassword = result.getString("password");
+                    rId = result.getString("eid");
+                    String Rpassword = result.getString("epass");
 
-                    System.out.println(Rname + " " + Rpassword);
+                    System.out.println(rId + " " + Rpassword);
 
                     label1.setText("User found,Logging in");
 
@@ -139,7 +134,7 @@ public class Controller {
                     System.out.println("Connection closed");
 
                     //change screen to Main_screen.fxml
-                    Parent root = FXMLLoader.load(getClass().getResource("Main_screen.fxml"));
+                    Parent root = FXMLLoader.load(getClass().getResource("Notifications_screen.fxml"));
                     Stage window = (Stage)Login.getScene().getWindow();
                     window.setScene(new Scene (root,1200,800));
 
@@ -147,17 +142,10 @@ public class Controller {
                 }else{
                     System.out.println("Array is empty");
                         label1.setText("Username or password is false");
-                        AlertBox.display("Warning","Invalid Username or password! ");
+
                 }
 
-
-
-
-
-
             }
-
-
 
         } catch (
                 SQLException e) {

@@ -18,7 +18,7 @@ import java.util.ResourceBundle;
 
 public class Farmaka_Controlelr implements Initializable{
     @FXML
-    Button Search_btn,Go_backBtn;
+    Button Search_btn,Go_backBtn,next;
     @FXML
     TextField pid_text;
     @FXML
@@ -44,7 +44,6 @@ public class Farmaka_Controlelr implements Initializable{
     @FXML
     TableColumn<Farmaka_Table, String> col_timessold;
 
-    //na valww sthlh times sold
 
     ObservableList<Farmaka_Table> oblist = FXCollections.observableArrayList();
     ObservableList choiceBoxStatus = FXCollections.
@@ -81,7 +80,7 @@ public class Farmaka_Controlelr implements Initializable{
       if(pid_string.isEmpty() == false ){
           ResultSet rs = stmt.executeQuery(sql);
           while (rs.next()) {
-              System.out.println("trying1");
+              System.out.println("trying2");
               oblist.add(new Farmaka_Table(
                       rs.getString("pid"),
                       rs.getString("pname"),
@@ -117,6 +116,12 @@ public class Farmaka_Controlelr implements Initializable{
 
     }
 
+    public void nextScene () throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("Notifications_screen.fxml"));
+        Stage window = (Stage)Go_backBtn.getScene().getWindow();
+        window.setScene(new Scene(root,453,500));
+
+    }
 
 }
 
