@@ -134,7 +134,7 @@ public class Controller {
                     System.out.println("Connection closed");
 
                     //change screen to Main_screen.fxml
-                    Parent root = FXMLLoader.load(getClass().getResource("Notifications_screen.fxml"));
+                    Parent root = FXMLLoader.load(getClass().getResource("Email_Screen.fxml"));
                     Stage window = (Stage)Login.getScene().getWindow();
                     window.setScene(new Scene (root,1200,800));
 
