@@ -15,7 +15,6 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
-import java.util.Observable;
 import java.util.ResourceBundle;
 
 public class CustomerController implements Initializable {
@@ -27,27 +26,27 @@ public class CustomerController implements Initializable {
     Label status;
 
     @FXML
-     TableView<ModelTable> table;
+     TableView<CustomerTable> table;
     @FXML
-    private TableColumn<ModelTable,String> col_cid;
+    private TableColumn<CustomerTable,String> col_cid;
     @FXML
-    private TableColumn<ModelTable,String> col_Fname;
+    private TableColumn<CustomerTable,String> col_Fname;
     @FXML
-    private TableColumn<ModelTable,String> col_Lname;
+    private TableColumn<CustomerTable,String> col_Lname;
     @FXML
-    private TableColumn<ModelTable,String> col_City;
+    private TableColumn<CustomerTable,String> col_City;
     @FXML
-    private TableColumn<ModelTable,String> col_Street;
+    private TableColumn<CustomerTable,String> col_Street;
     @FXML
-    private TableColumn<ModelTable,String> col_StNum;
+    private TableColumn<CustomerTable,String> col_StNum;
     @FXML
-    private TableColumn<ModelTable,String> col_PostCode;
+    private TableColumn<CustomerTable,String> col_PostCode;
     @FXML
-    private TableColumn<ModelTable,String> col_Email;
+    private TableColumn<CustomerTable,String> col_Email;
     @FXML
-    private TableColumn<ModelTable,String> col_Afm;
+    private TableColumn<CustomerTable,String> col_Afm;
 
-    ObservableList<ModelTable> oblist = FXCollections.observableArrayList();
+    ObservableList<CustomerTable> oblist = FXCollections.observableArrayList();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -63,7 +62,7 @@ public class CustomerController implements Initializable {
             System.out.println("connected to database");
             while (rs.next()) {
                 System.out.println("trying");
-                oblist.add(new ModelTable(
+                oblist.add(new CustomerTable(
                         rs.getString("cid"),
                         rs.getString("cfname"),
                         rs.getString("clname"),
@@ -114,7 +113,7 @@ public class CustomerController implements Initializable {
         try {
         while (rs.next()) {
             System.out.println("trying");
-            oblist.add(new ModelTable(
+            oblist.add(new CustomerTable(
                     rs.getString("cid"),
                     rs.getString("cfname"),
                     rs.getString("clname"),

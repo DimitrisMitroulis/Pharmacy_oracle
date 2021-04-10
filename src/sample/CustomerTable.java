@@ -1,10 +1,10 @@
 package sample;
 
-public class ModelTable {
+public class CustomerTable {
 
     String cfname,clname,city,street,cemail,cid,stnumber,postalcode,cafm;
 
-    public ModelTable(String cid, String cfname, String clname, String city, String street, String stnumber, String postalcode, String cemail, String cafm) {
+    public CustomerTable(String cid, String cfname, String clname, String city, String street, String stnumber, String postalcode, String cemail, String cafm) {
         this.cid = cid;
         this.cfname = cfname;
         this.clname = clname;
