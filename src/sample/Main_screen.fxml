@@ -12,7 +12,7 @@
 <AnchorPane prefHeight="562.0" prefWidth="1177.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.CustomerController">
    <children>
       <Button fx:id="Go_backBtn" layoutX="1096.0" layoutY="515.0" mnemonicParsing="false" onAction="#Go_back" text="Go_back" />
-      <TableView fx:id="table" layoutX="8.0" layoutY="83.0" prefHeight="198.0" prefWidth="1142.0">
+      <TableView fx:id="table" layoutX="8.0" layoutY="83.0" onMouseClicked="#getSelected" prefHeight="198.0" prefWidth="1142.0">
         <columns>
           <TableColumn fx:id="col_cid" prefWidth="75.0" text="Customer Id" />
           <TableColumn fx:id="col_Fname" prefWidth="175.0" text="First Name" />
@@ -44,5 +44,6 @@
       <Label fx:id="status" alignment="CENTER" layoutX="533.0" layoutY="507.0" prefHeight="25.0" prefWidth="200.0" />
       <Button fx:id="Refresh_btn" layoutX="1101.0" layoutY="302.0" mnemonicParsing="false" onAction="#Refresh" text="Refresh" />
       <Button fx:id="NextPage" layoutX="1103.0" layoutY="371.0" mnemonicParsing="false" onAction="#NexScene" text="NextPage" />
+      <Button fx:id="DeleteBtn" layoutX="1101.0" layoutY="337.0" mnemonicParsing="false" onAction="#Delete" text="Delete" />
    </children>
 </AnchorPane>

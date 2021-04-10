@@ -9,23 +9,25 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
+import java.util.Observable;
 import java.util.ResourceBundle;
 
 public class CustomerController implements Initializable {
     @FXML
-    Button Go_backBtn,Add_customer,Refresh_btn;
+    Button Go_backBtn,Add_customer,Refresh_btn,DeleteBtn;
     @FXML
     TextField Textcid,Tfname,Tlname,Tcity,Tstreet,Tstnum,Tps,Temail,Tafm;
     @FXML
     Label status;
 
     @FXML
-    private TableView<ModelTable> table;
+     TableView<ModelTable> table;
     @FXML
     private TableColumn<ModelTable,String> col_cid;
     @FXML
@@ -186,10 +188,15 @@ public class CustomerController implements Initializable {
             statement.setString(7, postalcodeStr);
             statement.setString(8, emailStr);
             statement.setString(9, afmStr);
-            System.out.println("Succesfully added");
+
+            int rows = statement.executeUpdate();
+            if (rows > 0){
+                System.out.println("Succesfully added");
+            }
 
             statement.close();
             connection.close();
+            Refresh();
 
 
     }
@@ -199,6 +206,41 @@ public class CustomerController implements Initializable {
         Parent root = FXMLLoader.load(getClass().getResource("Farmaka.fxml"));
         Stage window = (Stage)Go_backBtn.getScene().getWindow();
         window.setScene(new Scene(root,1200,800));
+    }
+
+    public void Delete(){
+        String delete = "delete from customer where cid = ? " ;
+        try {
+
+            Connection conn = DBConnector.getConnection();
+            PreparedStatement statement = conn.prepareStatement(delete);
+            statement.setString(1,Selectedcid);
+            statement.execute();
+
+
+            statement.close();
+            conn.close();
+            Refresh();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+
+
+
+
+    }
+    int index = -1;
+    private String Selectedcid="";
+    @FXML
+
+    void getSelected(MouseEvent event){
+        index = table.getSelectionModel().getSelectedIndex();
+        if(index <= -1){
+            return;
+        }
+
+        Selectedcid = col_cid.getCellData(index).toString();
+
     }
 }
 
