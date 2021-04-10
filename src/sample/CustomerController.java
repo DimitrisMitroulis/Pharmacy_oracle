@@ -196,6 +196,15 @@ public class CustomerController implements Initializable {
             statement.close();
             connection.close();
             Refresh();
+            Textcid.clear();
+            Tfname.clear();
+            Tlname.clear();
+            Tcity.clear();
+            Tstreet.clear();
+            Tstnum.clear();
+            Tps.clear();
+            Temail.clear();
+            Tafm.clear();
 
 
     }
@@ -220,6 +229,8 @@ public class CustomerController implements Initializable {
             statement.close();
             conn.close();
             Refresh();
+
+
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
