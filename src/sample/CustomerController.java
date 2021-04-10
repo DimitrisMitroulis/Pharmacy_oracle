@@ -16,7 +16,7 @@ import java.net.URL;
 import java.sql.*;
 import java.util.ResourceBundle;
 
-public class TableController implements Initializable {
+public class CustomerController implements Initializable {
     @FXML
     Button Go_backBtn,Add_customer,Refresh_btn;
     @FXML
