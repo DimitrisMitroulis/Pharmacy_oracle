@@ -38,6 +38,7 @@ public class Notifications_controller implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         //String searchid = "select from employee where eid";
+        //Get the eid of the person that logged in and keep the first number
         String searchId = Controller.rId;
         char ch1 = searchId.charAt(0);
 
@@ -53,7 +54,7 @@ public class Notifications_controller implements Initializable {
             while (rs.next()) {
                 System.out.println("trying2");
                 oblist.add(new NotificationTable(
-                        rs.getString("notid"),
+                        //rs.getString("notid"),
                         rs.getString("nsubj"),
                         rs.getDate("ndate")));
             }
@@ -63,7 +64,7 @@ public class Notifications_controller implements Initializable {
             conn.close();
             System.out.println("connection closed");
 
-            col_id.setCellValueFactory(new PropertyValueFactory<>("notid"));
+            //col_id.setCellValueFactory(new PropertyValueFactory<>("notid"));
             col_nsubj.setCellValueFactory(new PropertyValueFactory<>("nsubj"));
             col_ndate.setCellValueFactory(new PropertyValueFactory<>("ndate"));
             table.setItems(oblist);

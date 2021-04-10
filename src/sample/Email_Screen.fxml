@@ -4,7 +4,6 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Email_Controller">
    <children>
       <TextField fx:id="Email" layoutX="122.0" layoutY="90.0" prefHeight="53.0" prefWidth="325.0" promptText="Write your email here..." />

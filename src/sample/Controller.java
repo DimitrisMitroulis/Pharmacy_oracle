@@ -87,7 +87,6 @@ public class Controller {
 
     public void LoginOnAction() throws Exception{
 
-
         try {
             //get username and password from textfields
             String idStr = idTxt.getText();
@@ -134,14 +133,15 @@ public class Controller {
                     System.out.println("Connection closed");
 
                     //change screen to Main_screen.fxml
-                    Parent root = FXMLLoader.load(getClass().getResource("Email_Screen.fxml"));
+                    Parent root = FXMLLoader.load(getClass().getResource("Notifications_screen.fxml"));//Email_Screen
                     Stage window = (Stage)Login.getScene().getWindow();
                     window.setScene(new Scene (root,1200,800));
 
 
                 }else{
                     System.out.println("Array is empty");
-                        label1.setText("Username or password is false");
+                        //label1.setText("Username or password is false");
+                        AlertBox.display("Warning","Username or password is incorrect");
 
                 }
 
