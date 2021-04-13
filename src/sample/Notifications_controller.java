@@ -54,7 +54,6 @@ public class Notifications_controller implements Initializable {
             while (rs.next()) {
                 System.out.println("trying2");
                 oblist.add(new NotificationTable(
-                        //rs.getString("notid"),
                         rs.getString("nsubj"),
                         rs.getDate("ndate")));
             }
@@ -64,7 +63,7 @@ public class Notifications_controller implements Initializable {
             conn.close();
             System.out.println("connection closed");
 
-            //col_id.setCellValueFactory(new PropertyValueFactory<>("notid"));
+
             col_nsubj.setCellValueFactory(new PropertyValueFactory<>("nsubj"));
             col_ndate.setCellValueFactory(new PropertyValueFactory<>("ndate"));
             table.setItems(oblist);

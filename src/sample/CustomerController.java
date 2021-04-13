@@ -187,11 +187,20 @@ public class CustomerController implements Initializable {
             statement.setString(7, postalcodeStr);
             statement.setString(8, emailStr);
             statement.setString(9, afmStr);
+            int rows;
+            try {
+                 rows = statement.executeUpdate();
+                if (rows > 0){
+                    System.out.println("Succesfully added"+ rows);
 
-            int rows = statement.executeUpdate();
-            if (rows > 0){
-                System.out.println("Succesfully added");
+                }
+            }catch (Exception e){
+                AlertBox.display("Warning","You have entered invalid data");
+                System.out.println("wrong");
             }
+
+// kappa
+
 
             statement.close();
             connection.close();
@@ -205,6 +214,7 @@ public class CustomerController implements Initializable {
             Tps.clear();
             Temail.clear();
             Tafm.clear();
+            //na valoume na elenxei to pk gia na mhn bainoun 2pla cid
 
 
     }
