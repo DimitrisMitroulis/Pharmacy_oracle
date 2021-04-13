@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -13,6 +14,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.scene.image.ImageView;
 import javax.swing.*;
@@ -133,9 +135,14 @@ public class Controller {
                     System.out.println("Connection closed");
 
                     //change screen to Main_screen.fxml
-                    Parent root = FXMLLoader.load(getClass().getResource("Manager_MainScreen.fxml"));//Email_Screen
+                    Parent root = FXMLLoader.load(getClass().getResource("Manager_MainScreen.fxml"));
                     Stage window = (Stage)Login.getScene().getWindow();
-                    window.setScene(new Scene (root,1200,800));
+                    window.centerOnScreen();
+                    window.setScene(new Scene (root,1300,800));
+                    Rectangle2D primScreenBounds = Screen.getPrimary().getVisualBounds();
+                    window.setX((primScreenBounds.getWidth() - window.getWidth()) / 2);
+                    window.setY((primScreenBounds.getHeight() - window.getHeight()) / 2);
+
 
 
                 }else{

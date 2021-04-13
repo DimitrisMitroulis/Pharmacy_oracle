@@ -37,7 +37,7 @@ Button Notifications_btn,Customer_btn,Products_btn,Email_btn;
 
     public void loadEmail()throws IOException{
         FxmlLoader object = new FxmlLoader();
-        Pane view = object.getPage("Email_Screen");
+        Pane view = object.getPage("Email_screen");
         mainPane.setCenter(view);
     }
 }

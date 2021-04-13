@@ -20,6 +20,7 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         window.setScene(new Scene(root,453,500));
         window.setTitle("Hello World");
+        window.centerOnScreen();
         window.show();
         //root.getStylesheets().add("Viper.css");
 

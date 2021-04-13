@@ -9,9 +9,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="562.0" prefWidth="1177.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.CustomerController">
+<AnchorPane prefHeight="565.0" prefWidth="1158.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.CustomerController">
    <children>
-      <Button fx:id="Go_backBtn" layoutX="1096.0" layoutY="515.0" mnemonicParsing="false" onAction="#Go_back" text="Go_back" />
+      <Button fx:id="Go_backBtn" layoutX="1084.0" layoutY="495.0" mnemonicParsing="false" onAction="#Go_back" text="Go_back" />
       <TableView fx:id="table" layoutX="8.0" layoutY="83.0" onMouseClicked="#getSelected" prefHeight="198.0" prefWidth="1142.0">
         <columns>
           <TableColumn fx:id="col_cid" prefWidth="75.0" text="Customer Id" />
@@ -34,16 +34,16 @@
       <TextField fx:id="Tps" layoutX="640.0" layoutY="431.0" prefHeight="25.0" prefWidth="91.0" promptText="Postal Code" />
       <TextField fx:id="Temail" layoutX="741.0" layoutY="431.0" prefHeight="25.0" prefWidth="91.0" promptText="Email" />
       <TextField fx:id="Tafm" layoutX="843.0" layoutY="431.0" prefHeight="25.0" prefWidth="91.0" promptText="Afm" />
-      <Button fx:id="Add_customer" layoutX="1081.0" layoutY="419.0" mnemonicParsing="false" onAction="#add_button" text="Add customer" />
-      <Separator layoutX="-2.0" layoutY="411.0" prefHeight="0.0" prefWidth="1182.0" />
+      <Button fx:id="Add_customer" layoutX="1059.0" layoutY="419.0" mnemonicParsing="false" onAction="#add_button" text="Add customer" />
+      <Separator layoutX="-2.0" layoutY="411.0" prefHeight="3.0" prefWidth="1142.0" />
       <Label alignment="CENTER" layoutX="368.0" layoutY="7.0" prefHeight="47.0" prefWidth="442.0" text="Πελατολόγιο">
          <font>
             <Font size="25.0" />
          </font>
       </Label>
       <Label fx:id="status" alignment="CENTER" layoutX="533.0" layoutY="507.0" prefHeight="25.0" prefWidth="200.0" />
-      <Button fx:id="Refresh_btn" layoutX="1101.0" layoutY="302.0" mnemonicParsing="false" onAction="#Refresh" text="Refresh" />
-      <Button fx:id="NextPage" layoutX="1103.0" layoutY="371.0" mnemonicParsing="false" onAction="#NexScene" text="NextPage" />
-      <Button fx:id="DeleteBtn" layoutX="1101.0" layoutY="337.0" mnemonicParsing="false" onAction="#Delete" text="Delete" />
+      <Button fx:id="Refresh_btn" layoutX="1094.0" layoutY="300.0" mnemonicParsing="false" onAction="#Refresh" text="Refresh" />
+      <Button fx:id="NextPage" layoutX="1081.0" layoutY="369.0" mnemonicParsing="false" onAction="#NexScene" text="NextPage" />
+      <Button fx:id="DeleteBtn" layoutX="1097.0" layoutY="337.0" mnemonicParsing="false" onAction="#Delete" text="Delete" />
    </children>
 </AnchorPane>
