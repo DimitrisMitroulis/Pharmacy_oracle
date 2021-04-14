@@ -11,12 +11,12 @@ private Pane view;
 
 public Pane getPage(String filename) throws IOException {
 
-    URL file = Manager_controller.class.getResource(filename+".fxml");
+    URL file = Manager_controller.class.getResource(filename);
     if(filename==null){
         System.out.println("fxml file cannot be found");
         return null;
     }
-    view = new FXMLLoader().load(file);
+    view = FXMLLoader.load(file);
 
     return view;
 }

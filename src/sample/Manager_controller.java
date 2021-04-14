@@ -14,30 +14,35 @@ public class Manager_controller {
 @FXML
 private BorderPane mainPane;
 @FXML
-Button Notifications_btn,Customer_btn,Products_btn,Email_btn;
+Button Notifications_btn,Customer_btn,Products_btn,Email_btn,Movies_btn1;
 
 
     public void loadNotifications() throws IOException {
         FxmlLoader object = new FxmlLoader();
-        Pane view = object.getPage("Notifications_screen");
+        Pane view = object.getPage("Notifications_screen.fxml");
         mainPane.setCenter(view);
     }
 
     public void loadCustomers()throws IOException{
         FxmlLoader object = new FxmlLoader();
-        Pane view = object.getPage("Main_screen");
+        Pane view = object.getPage("Main_screen.fxml");
         mainPane.setCenter(view);
     }
 
     public void loadProducts()throws IOException{
         FxmlLoader object = new FxmlLoader();
-        Pane view = object.getPage("Farmaka");
+        Pane view = object.getPage("Farmaka.fxml");
         mainPane.setCenter(view);
     }
 
     public void loadEmail()throws IOException{
         FxmlLoader object = new FxmlLoader();
-        Pane view = object.getPage("Email_screen");
+        Pane view = object.getPage("Email_screen.fxml");
+        mainPane.setCenter(view);
+    }
+    public void loadMovies()throws IOException{
+        FxmlLoader object = new FxmlLoader();
+        Pane view = object.getPage("ViewMovies.fxml");
         mainPane.setCenter(view);
     }
 }
