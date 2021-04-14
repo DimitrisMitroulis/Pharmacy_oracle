@@ -18,7 +18,7 @@ Button Send_btn;
     public void SetupEmail() throws Exception {
         String messageTxt = Email.getText();
         System.out.println(messageTxt);
-        Send_email("chris.stam2000@gmail.com",messageTxt);
+        Send_email("amfimitrul@gmail.com",messageTxt);
 
     }
 
