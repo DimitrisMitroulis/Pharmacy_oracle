@@ -19,30 +19,30 @@ Button Notifications_btn,Customer_btn,Products_btn,Email_btn,Movies_btn1;
 
     public void loadNotifications() throws IOException {
         FxmlLoader object = new FxmlLoader();
-        Pane view = object.getPage("Notifications_screen.fxml");
+        Pane view = object.getPage("Notifications_screen");
         mainPane.setCenter(view);
     }
 
     public void loadCustomers()throws IOException{
         FxmlLoader object = new FxmlLoader();
-        Pane view = object.getPage("Main_screen.fxml");
+        Pane view = object.getPage("Main_screen");
         mainPane.setCenter(view);
     }
 
     public void loadProducts()throws IOException{
         FxmlLoader object = new FxmlLoader();
-        Pane view = object.getPage("Farmaka.fxml");
+        Pane view = object.getPage("Farmaka");
         mainPane.setCenter(view);
     }
 
     public void loadEmail()throws IOException{
         FxmlLoader object = new FxmlLoader();
-        Pane view = object.getPage("Email_screen.fxml");
+        Pane view = object.getPage("Email_screen");
         mainPane.setCenter(view);
     }
     public void loadMovies()throws IOException{
         FxmlLoader object = new FxmlLoader();
-        Pane view = object.getPage("ViewMovies.fxml");
+        Pane view = object.getPage("ViewMovies");
         mainPane.setCenter(view);
     }
 }

@@ -27,7 +27,7 @@ import java.util.ResourceBundle;
 public class Controller {
     public static String rId = "hello";
     @FXML
-    Button Login,Sign_up,Go_backBtn;
+    Button Login,Sign_up;
     @FXML
     TextField idTxt;
     @FXML
