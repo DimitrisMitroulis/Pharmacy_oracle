@@ -168,7 +168,7 @@ public class CustomerController implements Initializable {
         String postalcodeStr = Tps.getText();
         String emailStr = Temail.getText();
         String afmStr = Tafm.getText();
-
+        //na valw na mhn dexetai na pairnei null times
         String add = "insert into customer (cid,cfname,clname,city,street,stnumber,postalcode,cemail,cafm)"+
                 "values(?,?,?,?,?,?,?,?,?)";
 
@@ -199,7 +199,7 @@ public class CustomerController implements Initializable {
                 System.out.println("wrong");
             }
 
-// kappa
+
 
 
             statement.close();

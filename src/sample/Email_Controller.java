@@ -19,7 +19,7 @@ Button Send_btn;
         String messageTxt = Email.getText();
         System.out.println(messageTxt);
         Send_email("amfimitrul@gmail.com",messageTxt);
-
+        //Notifications not = Notifications.create();
     }
 
 

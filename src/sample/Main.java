@@ -22,7 +22,7 @@ public class Main extends Application {
         window.setTitle("Hello World");
         window.centerOnScreen();
         window.show();
-        //root.getStylesheets().add("Viper.css");
+        root.getStylesheets().add("Viper.css");
 
     }
 

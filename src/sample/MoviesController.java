@@ -38,8 +38,7 @@ HBox hb = new HBox();
     public void loadElements() throws UnsupportedEncodingException {
         String path = URLDecoder.decode("scr/Icons/img2.png","UTF-8");
 
-        File folder = new File("C:\\Users\\DIMITRIS\\Documents\\NetBeansProjects\\untitled_oracle\\src\\Icons\\img2.png");
-        String v = folder.getName();
+
 
         grid.setPadding(new Insets(7,7,7,7));
         grid.setHgap(10);

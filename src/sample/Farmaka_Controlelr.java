@@ -46,8 +46,7 @@ public class Farmaka_Controlelr implements Initializable{
 
 
     ObservableList<Farmaka_Table> oblist = FXCollections.observableArrayList();
-    ObservableList choiceBoxStatus = FXCollections.
-            observableArrayList();
+    ObservableList choiceBoxStatus = FXCollections.observableArrayList();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

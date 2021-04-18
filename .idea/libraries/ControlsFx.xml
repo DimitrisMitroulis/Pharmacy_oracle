@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="ControlsFx">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$USER_HOME$/Desktop/Inteliji picture/controlsfx-jfx-13/controlsfx-samples/src/main/java" />
+      <root url="file://$USER_HOME$/Desktop/Inteliji picture/controlsfx-jfx-13/controlsfx/src/main/java" />
+      <root url="file://$USER_HOME$/Desktop/Inteliji picture/controlsfx-jfx-13/controlsfx/src/test/java" />
+      <root url="file://$USER_HOME$/Desktop/Inteliji picture/controlsfx-jfx-13/fxsampler/src/main/java" />
+    </SOURCES>
+  </library>
+</component>

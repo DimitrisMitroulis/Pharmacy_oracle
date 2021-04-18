@@ -1,41 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1303.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Manager_controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1304.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Manager_controller">
    <children>
-      <BorderPane fx:id="mainPane" layoutX="-2.0" prefHeight="800.0" prefWidth="1303.0">
+      <BorderPane fx:id="mainPane" prefHeight="800.0" prefWidth="1303.0" style="-fx-background-color: #efefef;">
          <left>
-            <VBox prefHeight="658.0" prefWidth="100.0" style="-fx-background-color: #8eff61;" BorderPane.alignment="CENTER">
+            <VBox alignment="TOP_RIGHT" prefHeight="800.0" prefWidth="248.0" style="-fx-background-color: #223b37;" BorderPane.alignment="CENTER">
                <children>
-                  <Button fx:id="Notifications_btn" mnemonicParsing="false" onAction="#loadNotifications" prefHeight="35.0" prefWidth="100.0" text="Notifications">
+                  <Button id="button" fx:id="Notifications_btn" mnemonicParsing="false" onAction="#loadNotifications" prefHeight="50.0" prefWidth="210.0" stylesheets="@Viper.css" text="Notifications">
                      <VBox.margin>
                         <Insets bottom="20.0" top="80.0" />
                      </VBox.margin>
+                     <font>
+                        <Font name="Segoe UI Bold" size="25.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
-                  <Button fx:id="Customer_btn" layoutX="10.0" layoutY="30.0" mnemonicParsing="false" onAction="#loadCustomers" prefHeight="35.0" prefWidth="100.0" text="Customer List">
+                  <Button id="button" fx:id="Customer_btn" layoutX="10.0" layoutY="30.0" mnemonicParsing="false" onAction="#loadCustomers" prefHeight="50.0" prefWidth="210.0" stylesheets="@Viper.css" text="Customer List">
                      <VBox.margin>
                         <Insets bottom="20.0" top="20.0" />
                      </VBox.margin>
+                     <font>
+                        <Font name="Segoe UI Bold" size="25.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
-                  <Button fx:id="Products_btn" layoutX="10.0" layoutY="85.0" mnemonicParsing="false" onAction="#loadProducts" prefHeight="35.0" prefWidth="100.0" text="Products">
+                  <Button id="button" fx:id="Products_btn" layoutX="10.0" layoutY="85.0" mnemonicParsing="false" onAction="#loadProducts" prefHeight="50.0" prefWidth="210.0" stylesheets="@Viper.css" text="Products">
                      <VBox.margin>
                         <Insets bottom="20.0" top="20.0" />
                      </VBox.margin>
+                     <font>
+                        <Font name="Segoe UI Bold" size="25.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
-                  <Button fx:id="Email_btn" layoutX="10.0" layoutY="140.0" mnemonicParsing="false" onAction="#loadEmail" prefHeight="35.0" prefWidth="100.0" text="Send Email">
+                  <Button id="button" fx:id="Email_btn" layoutX="10.0" layoutY="140.0" mnemonicParsing="false" onAction="#loadEmail" prefHeight="50.0" prefWidth="210.0" stylesheets="@Viper.css" text="Send Email">
                      <VBox.margin>
                         <Insets bottom="20.0" top="20.0" />
                      </VBox.margin>
+                     <font>
+                        <Font name="Segoe UI Bold" size="25.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
-                  <Button fx:id="Movies_btn1" layoutX="10.0" layoutY="315.0" mnemonicParsing="false" onAction="#loadMovies" prefHeight="35.0" prefWidth="100.0" text="View Movies">
+                  <Button id="button" fx:id="Movies_btn1" layoutX="10.0" layoutY="315.0" mnemonicParsing="false" onAction="#loadMovies" prefHeight="50.0" prefWidth="210.0" stylesheets="@Viper.css" text="View Movies">
                      <VBox.margin>
                         <Insets top="20.0" />
                      </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="Segoe UI Bold" size="25.0" />
+                     </font>
                   </Button>
                </children>
             </VBox>
