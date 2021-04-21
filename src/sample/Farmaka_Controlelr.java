@@ -50,6 +50,17 @@ public class Farmaka_Controlelr implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        choiceBoxStatus.removeAll(choiceBoxStatus);
+        String pid = "id";
+        String name = "name";
+        String Type = "type";
+        String Stock = "stock";
+        String Koaap = "koaap";
+        String timessold = "timessold";
+        choiceBoxStatus.addAll(pid,name,Type,Stock,Koaap,timessold);
+        choiceBox.getItems().addAll(choiceBoxStatus);
+        choiceBox.setValue(pid);
+
         String sql = "select * from products ";
 
         Connection conn = null;
