@@ -3,74 +3,73 @@ package sample;
 import java.sql.Date;
 
 public class Farmaka_Table {
-    String pid,pname,ptype,pstock,pkoaap,ptimessold;
-    Date pexpdate;
+    String id,name,type,stock,koaap,timessold;
+    Date expdate;
 
 
-    public Farmaka_Table(String pid, String pname, String ptype, Date pexpdate, String pstock, String pkoaap, String ptimessold) {
-        this.pid = pid;
-        this.pname = pname;
-        this.ptype = ptype;
-        this.pexpdate = pexpdate;
-        this.pstock = pstock;
-        this.pkoaap = pkoaap;
-        this.ptimessold = ptimessold;
+    public Farmaka_Table(String id, String name, String type,Date expdate ,String stock, String koaap, String timessold ) {
+        this.id = id;
+        this.name = name;
+        this.type = type;
+        this.stock = stock;
+        this.koaap = koaap;
+        this.timessold = timessold;
+        this.expdate = expdate;
     }
 
-    public String getPtimessold() {
-        return ptimessold;
+    public String getId() {
+        return id;
     }
 
-    public void setPtimessold(String ptimessold) {
-        this.ptimessold = ptimessold;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public Date getPexpdate() {
-        return pexpdate;
+    public String getName() {
+        return name;
     }
 
-    public void setPexpdate(Date pexpdate) {
-        this.pexpdate = pexpdate;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getPid() {
-        return pid;
+    public String getType() {
+        return type;
     }
 
-    public void setPid(String pid) {
-        this.pid = pid;
+    public void setType(String type) {
+        this.type = type;
     }
 
-    public String getPname() {
-        return pname;
+    public String getStock() {
+        return stock;
     }
 
-    public void setPname(String pname) {
-        this.pname = pname;
+    public void setStock(String stock) {
+        this.stock = stock;
     }
 
-    public String getPtype() {
-        return ptype;
+    public String getKoaap() {
+        return koaap;
     }
 
-    public void setPtype(String ptype) {
-        this.ptype = ptype;
+    public void setKoaap(String koaap) {
+        this.koaap = koaap;
     }
 
-
-    public String getPstock() {
-        return pstock;
+    public String getTimessold() {
+        return timessold;
     }
 
-    public void setPstock(String pstock) {
-        this.pstock = pstock;
+    public void setTimessold(String timessold) {
+        this.timessold = timessold;
     }
 
-    public String getPkoaap() {
-        return pkoaap;
+    public Date getExpdate() {
+        return expdate;
     }
 
-    public void setPkoaap(String pkoaap) {
-        this.pkoaap = pkoaap;
+    public void setExpdate(Date expdate) {
+        this.expdate = expdate;
     }
 }

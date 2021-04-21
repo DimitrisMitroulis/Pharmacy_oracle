@@ -50,17 +50,45 @@ public class Farmaka_Controlelr implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        choiceBoxStatus.removeAll(choiceBoxStatus);
-        String pid = "pid";
-        String name = "pname";
-        String Type = "ptype";
-        String Stock = "pstock";
-        String Koaap = "pkoaap";
-        String timessold = "ptimessold";
-        choiceBoxStatus.addAll(pid,name,Type,Stock,Koaap,timessold);
-        choiceBox.getItems().addAll(choiceBoxStatus);
-        choiceBox.setValue(pid);
+        String sql = "select * from products ";
 
+        Connection conn = null;
+        try {
+            conn = DBConnector.getConnection();
+
+        Statement stmt = conn.createStatement();
+
+
+
+            ResultSet rs = stmt.executeQuery(sql);
+            while (rs.next()) {
+                System.out.println("trying2");
+                oblist.add(new Farmaka_Table(
+                        rs.getString("id"),
+                        rs.getString("name"),
+                        rs.getString("type"),
+                        rs.getDate("expdate"),
+                        rs.getString("stock"),
+                        rs.getString("koaap"),
+                        rs.getString("timessold")));
+            }
+            rs.close();
+            stmt.close();
+            conn.close();
+
+            col_pid.setCellValueFactory(new PropertyValueFactory<>("id"));
+            col_pname.setCellValueFactory(new PropertyValueFactory<>("name"));
+            col_ptype.setCellValueFactory(new PropertyValueFactory<>("type"));
+            col_expdate.setCellValueFactory(new PropertyValueFactory<>("expdate"));
+            col_stock.setCellValueFactory(new PropertyValueFactory<>("stock"));
+            col_koaap.setCellValueFactory(new PropertyValueFactory<>("koaap"));
+            col_timessold.setCellValueFactory(new PropertyValueFactory<>("timessold"));
+            table.setItems(oblist);
+
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
     }
 
     public void search() throws SQLException {
@@ -81,25 +109,25 @@ public class Farmaka_Controlelr implements Initializable{
           while (rs.next()) {
               System.out.println("trying2");
               oblist.add(new Farmaka_Table(
-                      rs.getString("pid"),
-                      rs.getString("pname"),
-                      rs.getString("ptype"),
-                      rs.getDate("pexpdate"),
-                      rs.getString("pstock"),
-                      rs.getString("pkoaap"),
-                      rs.getString("ptimessold")));
+                      rs.getString("id"),
+                      rs.getString("name"),
+                      rs.getString("type"),
+                      rs.getDate("expdate"),
+                      rs.getString("stock"),
+                      rs.getString("koaap"),
+                      rs.getString("timessold")));
             }
           rs.close();
           stmt.close();
           conn.close();
 
-          col_pid.setCellValueFactory(new PropertyValueFactory<>("pid"));
-          col_pname.setCellValueFactory(new PropertyValueFactory<>("pname"));
-          col_ptype.setCellValueFactory(new PropertyValueFactory<>("ptype"));
-          col_expdate.setCellValueFactory(new PropertyValueFactory<>("pexpdate"));
-          col_stock.setCellValueFactory(new PropertyValueFactory<>("pstock"));
-          col_koaap.setCellValueFactory(new PropertyValueFactory<>("pkoaap"));
-          col_timessold.setCellValueFactory(new PropertyValueFactory<>("ptimessold"));
+          col_pid.setCellValueFactory(new PropertyValueFactory<>("id"));
+          col_pname.setCellValueFactory(new PropertyValueFactory<>("name"));
+          col_ptype.setCellValueFactory(new PropertyValueFactory<>("type"));
+          col_expdate.setCellValueFactory(new PropertyValueFactory<>("expdate"));
+          col_stock.setCellValueFactory(new PropertyValueFactory<>("stock"));
+          col_koaap.setCellValueFactory(new PropertyValueFactory<>("koaap"));
+          col_timessold.setCellValueFactory(new PropertyValueFactory<>("timessold"));
           table.setItems(oblist);
       }else{
           AlertBox.display("Warning","Please type a value to search");}
