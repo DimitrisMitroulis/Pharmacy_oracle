@@ -26,7 +26,7 @@ public class CustomerController implements Initializable {
     Label status;
 
     @FXML
-     TableView<CustomerTable> table;
+    TableView<CustomerTable> table;
     @FXML
     private TableColumn<CustomerTable,String> col_cid;
     @FXML
@@ -56,7 +56,6 @@ public class CustomerController implements Initializable {
             String sql = "select * from customer";
             Connection conn = DBConnector.getConnection();
             Statement stmt = conn.createStatement();
-
             ResultSet rs = stmt.executeQuery(sql);
 
             System.out.println("connected to database");
@@ -71,12 +70,11 @@ public class CustomerController implements Initializable {
                         rs.getString("stnumber"),
                         rs.getString("postalcode"),
                         rs.getString("cemail"),
-                        rs.getString("cafm")));
+                        rs.getString("cafmnumber")));
 
             }
             rs.close();
             stmt.close();
-
             conn.close();
 
         } catch (SQLException throwables) {
@@ -92,12 +90,8 @@ public class CustomerController implements Initializable {
         col_StNum.setCellValueFactory(new PropertyValueFactory<>("stnumber"));
         col_PostCode.setCellValueFactory(new PropertyValueFactory<>("postalcode"));
         col_Email.setCellValueFactory(new PropertyValueFactory<>("cemail"));
-        col_Afm.setCellValueFactory(new PropertyValueFactory<>("cafm"));
-
-
-
-
-            table.setItems(oblist);
+        col_Afm.setCellValueFactory(new PropertyValueFactory<>("cafmnumber"));
+        table.setItems(oblist);
     }
 
     public void Refresh() throws SQLException {
@@ -260,7 +254,7 @@ public class CustomerController implements Initializable {
         }
 
         Selectedcid = col_cid.getCellData(index).toString();
-
+        Textcid.setText((col_cid.getCellData(index).toString()));
     }
 }
 

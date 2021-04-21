@@ -2,9 +2,9 @@ package sample;
 
 public class CustomerTable {
 
-    String cfname,clname,city,street,cemail,cid,stnumber,postalcode,cafm;
+    String cfname,clname,city,street,cemail,cid,stnumber,postalcode,cafmnumber;
 
-    public CustomerTable(String cid, String cfname, String clname, String city, String street, String stnumber, String postalcode, String cemail, String cafm) {
+    public CustomerTable(String cid, String cfname, String clname, String city, String street, String stnumber, String postalcode, String cemail, String cafmnumber) {
         this.cid = cid;
         this.cfname = cfname;
         this.clname = clname;
@@ -13,7 +13,7 @@ public class CustomerTable {
         this.stnumber = stnumber;
         this.postalcode = postalcode;
         this.cemail = cemail;
-        this.cafm = cafm;
+        this.cafmnumber = cafmnumber;
     }
 
     public String getCfname() {
@@ -80,11 +80,11 @@ public class CustomerTable {
         this.postalcode = postalcode;
     }
 
-    public String getCafm() {
-        return cafm;
+    public String getCafmnumber() {
+        return cafmnumber;
     }
 
-    public void setCafm(String cafm) {
-        this.cafm = cafm;
+    public void setCcafmnumber(String cafmnumber) {
+        this.cafmnumber = cafmnumber;
     }
 }
