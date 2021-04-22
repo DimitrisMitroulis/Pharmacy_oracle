@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane style="-fx-background-color: #f9f9f9; -fx-border-radius: 100;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Label fx:id="label1" alignment="CENTER" contentDisplay="CENTER" layoutX="125.0" layoutY="179.0" prefHeight="25.0" prefWidth="215.0" />
+      <AnchorPane layoutX="418.0" layoutY="48.0" prefHeight="346.0" prefWidth="243.0" style="-fx-background-color: #0E605A; -fx-background-radius: 10; -fx-border-radius: 5;" styleClass="loginBoard" stylesheets="@MainStyle.css">
+         <children>
+            <TextField fx:id="idTxt" layoutX="29.0" layoutY="126.0" prefHeight="25.0" prefWidth="183.0">
+               <font>
+                  <Font name="Segoe UI" size="12.0" />
+               </font></TextField>
+            <Button fx:id="Login" layoutX="29.0" layoutY="248.0" mnemonicParsing="false" onAction="#LoginOnAction" prefHeight="32.0" prefWidth="183.0" style="-fx-background-color: DB741D; -fx-background-radius: 5;" text="Σύνδεση" textAlignment="CENTER" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Segoe UI Semibold" size="12.0" />
+               </font></Button>
+            <PasswordField fx:id="PasswordTxt" layoutX="29.0" layoutY="193.0" prefHeight="25.0" prefWidth="183.0" />
+            <Label layoutX="31.0" layoutY="24.0" text="Σύνδεση" textFill="#efefef">
+               <font>
+                  <Font name="Segoe UI" size="26.0" />
+               </font>
+            </Label>
+            <Label layoutX="32.0" layoutY="100.0" text="Αριθμός Υπαλλήλου" textFill="#efefef">
+               <font>
+                  <Font name="Segoe UI Semibold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="33.0" layoutY="167.0" text="Κωδικός Πρόσβασης" textFill="#efefef">
+               <font>
+                  <Font name="Segoe UI Semibold" size="12.0" />
+               </font></Label>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="153.0" fitWidth="165.0" layoutX="116.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="205.0" AnchorPane.leftAnchor="116.0" AnchorPane.rightAnchor="463.8598175048828" AnchorPane.topAnchor="80.0">
+         <image>
+            <Image url="@../Icons/LOGO.jpg" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="57.0" layoutY="257.0" prefHeight="41.0" prefWidth="268.0" text="PHARMASTRORAGE" textFill="#0e605a">
+         <font>
+            <Font name="Segoe UI Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="116.0" layoutY="314.0" text="Μαζί για τον πολίτη...">
+         <font>
+            <Font name="Times New Roman Italic" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

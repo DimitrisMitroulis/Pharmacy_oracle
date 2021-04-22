@@ -1,77 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.Cursor?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1304.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Manager_controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: #FFF;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Manager_controller">
    <children>
-      <BorderPane fx:id="mainPane" prefHeight="800.0" prefWidth="1303.0" style="-fx-background-color: #efefef;">
-         <left>
-            <VBox alignment="TOP_RIGHT" prefHeight="800.0" prefWidth="248.0" style="-fx-background-color: #223b37;" BorderPane.alignment="CENTER">
-               <children>
-                  <Button id="button" fx:id="Notifications_btn" mnemonicParsing="false" onAction="#loadNotifications" prefHeight="50.0" prefWidth="210.0" stylesheets="@MainStyle.css" text="Notifications">
-                     <VBox.margin>
-                        <Insets bottom="20.0" top="80.0" />
-                     </VBox.margin>
-                     <font>
-                        <Font name="Segoe UI Bold" size="25.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </Button>
-                  <Button id="button" fx:id="Customer_btn" layoutX="10.0" layoutY="30.0" mnemonicParsing="false" onAction="#loadCustomers" prefHeight="50.0" prefWidth="210.0" stylesheets="@MainStyle.css" text="Customer List">
-                     <VBox.margin>
-                        <Insets bottom="20.0" top="20.0" />
-                     </VBox.margin>
-                     <font>
-                        <Font name="Segoe UI Bold" size="25.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </Button>
-                  <Button id="button" fx:id="Products_btn" layoutX="10.0" layoutY="85.0" mnemonicParsing="false" onAction="#loadProducts" prefHeight="50.0" prefWidth="210.0" stylesheets="@MainStyle.css" text="Products">
-                     <VBox.margin>
-                        <Insets bottom="20.0" top="20.0" />
-                     </VBox.margin>
-                     <font>
-                        <Font name="Segoe UI Bold" size="25.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </Button>
-                  <Button id="button" fx:id="Email_btn" layoutX="10.0" layoutY="140.0" mnemonicParsing="false" onAction="#loadEmail" prefHeight="50.0" prefWidth="210.0" stylesheets="@MainStyle.css" text="Send Email">
-                     <VBox.margin>
-                        <Insets bottom="20.0" top="20.0" />
-                     </VBox.margin>
-                     <font>
-                        <Font name="Segoe UI Bold" size="25.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </Button>
-                  <Button id="button" fx:id="Movies_btn1" layoutX="10.0" layoutY="315.0" mnemonicParsing="false" onAction="#loadMovies" prefHeight="50.0" prefWidth="210.0" stylesheets="@MainStyle.css" text="View Movies">
-                     <VBox.margin>
-                        <Insets top="20.0" />
-                     </VBox.margin>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                     <font>
-                        <Font name="Segoe UI Bold" size="25.0" />
-                     </font>
-                  </Button>
-               </children>
-            </VBox>
-         </left>
-      </BorderPane>
+      <AnchorPane prefHeight="700.0" prefWidth="285.0" style="-fx-background-color: #0E605A;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="35.0" layoutY="30.0" prefHeight="35.0" prefWidth="216.0" text="PHARMASTORAGE" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Bold" size="24.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="110.0" fitWidth="103.0" layoutX="93.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/Owner-Picture.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="95.0" layoutY="210.0" text="Ergun Softa" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="113.0" layoutY="233.0" text="Ιδιοκτήτης" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI" size="12.0" />
+               </font>
+            </Label>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f9f9f9" height="35.0" layoutX="41.0" layoutY="281.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="201.0" />
+            <Button layoutX="72.0" layoutY="284.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="115.0" style="-fx-background-color: #F9F9F9;" text="Αρχική Σελίδα">
+               <font>
+                  <Font name="Segoe UI" size="14.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="23.0" fitWidth="17.0" layoutX="52.0" layoutY="289.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/home%20(1).png" />
+               </image>
+            </ImageView>
+            <Line endX="100.0" fill="WHITE" layoutX="142.0" layoutY="66.0" startX="-100.0" stroke="WHITE" strokeLineCap="ROUND" />
+            <Label layoutX="106.0" layoutY="647.0" text="Έξοδος" textFill="WHITE" AnchorPane.bottomAnchor="34.0">
+               <font>
+                  <Font name="Segoe UI" size="16.0" />
+               </font>
+            </Label>
+            <Button layoutX="72.0" layoutY="335.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="115.0" style="-fx-background-color: trasparent;" text="Ειδοποιήσεις" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="72.0" layoutY="395.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="115.0" style="-fx-background-color: transparent;" text="Λογιστήριο" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="79.0" layoutY="458.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Πελατολόγιο" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="77.0" layoutY="511.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="119.0" style="-fx-background-color: transparent;" text="Ηλεκτρονικό &#10;Ταχυδρομείο" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="87.0" layoutY="590.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Διαχείριση" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI" size="16.0" />
+               </font>
+            </Button>
+         </children></AnchorPane>
+      <Label layoutX="350.0" layoutY="80.0" text="Ιδιοκτήτης">
+         <font>
+            <Font name="Segoe UI" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="350.0" layoutY="115.0" text="Ergun Softa" textFill="#db741d">
+         <font>
+            <Font name="Bell MT Bold" size="44.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="725.0" layoutY="115.0" prefHeight="261.0" prefWidth="381.0" />
+      <Label layoutX="731.0" layoutY="46.0" text="Τελευταίες Ειδοποιήσεις">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Label>
+      <BarChart layoutX="350.0" layoutY="396.0" prefHeight="270.0" prefWidth="800.0" style="-fx-background-color: EFEFEF; -fx-background-radius: 10; -fx-padding: 12;" titleSide="BOTTOM" AnchorPane.bottomAnchor="34.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="50.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis prefHeight="215.0" prefWidth="54.0" side="LEFT" tickLabelGap="5.0" upperBound="10000.0" />
+        </yAxis>
+      </BarChart>
+      <Label layoutX="350.0" layoutY="352.0" text="Στατιστικά Εισοδήματος" AnchorPane.bottomAnchor="324.0">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="426.0" layoutY="221.0" text="Παραδόθηκαν">
+         <font>
+            <Font name="Segoe UI" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="426.0" layoutY="274.0" text="Αριθμος ενεργών παραγγελιών">
+         <font>
+            <Font name="Segoe UI" size="15.0" />
+         </font>
+      </Label>
+      <TableView layoutX="717.0" layoutY="80.0" prefHeight="282.0" prefWidth="434.0" style="-fx-background-radius: 10; -fx-background-color: EFEFEF;" AnchorPane.bottomAnchor="338.0" AnchorPane.leftAnchor="717.0" AnchorPane.rightAnchor="49.0" AnchorPane.topAnchor="80.0">
+        <columns>
+          <TableColumn prefWidth="100.0" text="Ημερομηνία" />
+          <TableColumn prefWidth="92.0" text="Ώρα" />
+            <TableColumn prefWidth="97.0" text="Ιδιότητα" />
+            <TableColumn prefWidth="143.0" text="Θέμα" />
+            </columns>
+      </TableView>
+      <Label layoutX="350.0" layoutY="214.0" text="4125">
+         <font>
+            <Font name="Segoe UI Bold" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="369.0" layoutY="268.0" text="47">
+         <font>
+            <Font name="Segoe UI Bold" size="26.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

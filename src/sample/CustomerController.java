@@ -146,7 +146,7 @@ public class CustomerController implements Initializable {
 
     public void Go_back() throws IOException {
 
-        Parent root = FXMLLoader.load(getClass().getResource("loginScene.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("Login_Screen.fxml"));
         Stage window = (Stage)Go_backBtn.getScene().getWindow();
         window.setScene(new Scene(root,453,500));
 
