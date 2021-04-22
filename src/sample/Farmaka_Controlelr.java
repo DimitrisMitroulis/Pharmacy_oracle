@@ -148,7 +148,7 @@ public class Farmaka_Controlelr implements Initializable{
 
     public void Go_back() throws IOException {
 
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("loginScene.fxml"));
         Stage window = (Stage)Go_backBtn.getScene().getWindow();
         window.setScene(new Scene(root,453,500));
 

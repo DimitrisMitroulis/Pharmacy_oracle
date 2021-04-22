@@ -14,7 +14,7 @@
          <left>
             <VBox alignment="TOP_RIGHT" prefHeight="800.0" prefWidth="248.0" style="-fx-background-color: #223b37;" BorderPane.alignment="CENTER">
                <children>
-                  <Button id="button" fx:id="Notifications_btn" mnemonicParsing="false" onAction="#loadNotifications" prefHeight="50.0" prefWidth="210.0" stylesheets="@Viper.css" text="Notifications">
+                  <Button id="button" fx:id="Notifications_btn" mnemonicParsing="false" onAction="#loadNotifications" prefHeight="50.0" prefWidth="210.0" stylesheets="@MainStyle.css" text="Notifications">
                      <VBox.margin>
                         <Insets bottom="20.0" top="80.0" />
                      </VBox.margin>
@@ -25,7 +25,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button id="button" fx:id="Customer_btn" layoutX="10.0" layoutY="30.0" mnemonicParsing="false" onAction="#loadCustomers" prefHeight="50.0" prefWidth="210.0" stylesheets="@Viper.css" text="Customer List">
+                  <Button id="button" fx:id="Customer_btn" layoutX="10.0" layoutY="30.0" mnemonicParsing="false" onAction="#loadCustomers" prefHeight="50.0" prefWidth="210.0" stylesheets="@MainStyle.css" text="Customer List">
                      <VBox.margin>
                         <Insets bottom="20.0" top="20.0" />
                      </VBox.margin>
@@ -36,7 +36,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button id="button" fx:id="Products_btn" layoutX="10.0" layoutY="85.0" mnemonicParsing="false" onAction="#loadProducts" prefHeight="50.0" prefWidth="210.0" stylesheets="@Viper.css" text="Products">
+                  <Button id="button" fx:id="Products_btn" layoutX="10.0" layoutY="85.0" mnemonicParsing="false" onAction="#loadProducts" prefHeight="50.0" prefWidth="210.0" stylesheets="@MainStyle.css" text="Products">
                      <VBox.margin>
                         <Insets bottom="20.0" top="20.0" />
                      </VBox.margin>
@@ -47,7 +47,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button id="button" fx:id="Email_btn" layoutX="10.0" layoutY="140.0" mnemonicParsing="false" onAction="#loadEmail" prefHeight="50.0" prefWidth="210.0" stylesheets="@Viper.css" text="Send Email">
+                  <Button id="button" fx:id="Email_btn" layoutX="10.0" layoutY="140.0" mnemonicParsing="false" onAction="#loadEmail" prefHeight="50.0" prefWidth="210.0" stylesheets="@MainStyle.css" text="Send Email">
                      <VBox.margin>
                         <Insets bottom="20.0" top="20.0" />
                      </VBox.margin>
@@ -58,7 +58,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button id="button" fx:id="Movies_btn1" layoutX="10.0" layoutY="315.0" mnemonicParsing="false" onAction="#loadMovies" prefHeight="50.0" prefWidth="210.0" stylesheets="@Viper.css" text="View Movies">
+                  <Button id="button" fx:id="Movies_btn1" layoutX="10.0" layoutY="315.0" mnemonicParsing="false" onAction="#loadMovies" prefHeight="50.0" prefWidth="210.0" stylesheets="@MainStyle.css" text="View Movies">
                      <VBox.margin>
                         <Insets top="20.0" />
                      </VBox.margin>

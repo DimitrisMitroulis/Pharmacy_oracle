@@ -17,12 +17,12 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         window = primaryStage;
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("loginScene.fxml"));
         window.setScene(new Scene(root,453,500));
         window.setTitle("Hello World");
         window.centerOnScreen();
         window.show();
-        root.getStylesheets().add("Viper.css");
+        root.getStylesheets().add("MainStyle.css");
 
     }
 
