@@ -163,7 +163,7 @@ public class CustomerController implements Initializable {
         String emailStr = Temail.getText();
         String afmStr = Tafm.getText();
         //na valw na mhn dexetai na pairnei null times
-        String add = "insert into customer (cid,cfname,clname,city,street,stnumber,postalcode,cemail,cafm)"+
+        String add = "insert into customer (cid,cfname,clname,city,street,stnumber,postalcode,cemail,cafmnumber)"+
                 "values(?,?,?,?,?,?,?,?,?)";
 
              String search = "Select * from customer where cid = '" + cidStr + "' ";
